@@ -1,7 +1,6 @@
 import requests
 import lxml.html
 from bs4 import BeautifulSoup
-import requests
 
 content = []
 
