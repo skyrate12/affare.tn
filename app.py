@@ -78,7 +78,7 @@ class test:
                                             f.write(save)
 
                                     
-                                    # self.site_api['categories'] = {category: {'Villes': {k: {'regions':{e: []}}}}}
+                                    self.site_api['categories'] = {category: {'Villes': {k: {'regions':{e: []}}}}}
 
                                     with open('site_api.json', 'r') as f:
                                         new = json.load(f)
@@ -122,7 +122,7 @@ class test:
         print('Number of Pages', pages)
 
         products_urls = []
-        for page in range(pages):
+        for page in range(1, pages):
 
             resp = self.req.get(cv_url+'?o='+str(page))
             print(resp.url)
@@ -139,7 +139,7 @@ class test:
 
     def p_details(self, p_urls, ville, region, category, pos):
         
-            count = 0
+            count = 1
             for p_url in p_urls:
 
                 print("Getting product info:", count, 'of', len(p_urls), 'current position', category, ville)
